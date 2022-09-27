@@ -3,22 +3,27 @@
 
 int main()
 {
-    int N,i,R;
-    printf("saisir le nombre a multipluer:");
-    scanf("%d",&N);
+    int T[10]={32,0,23,112,-6,34,10,56,76,-66};
+    int N,i,j,swap;
 
-   while (N>10) {
-    printf("saisir le nombre a multipluer");
-    scanf("%d",&N);
+
+for (i=0;i<=10;i++){
+   for (j=i+1;j<=10;j++){
+
+   if (T[i]>T[j]) {
+     swap=T[i];
+   T[i]=T[j];
+   T[j]=swap;
    }
+}
+}
+for (i=0;i<=10;i++) {
+printf("T[%d]=%d\n",i,T[i]);
 
 
 
-    for (i=0;i<10;i++)
-    { R=N*i;
-        printf("%d*%d=%d\n",N,i,R);
-    }
 
+}
 
     return 0;
 }
